@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieHub | Find Your Movie</title>
+
+    <link rel="icon" type="image/x-icon" href="/movieicon.svg">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="overlay"></div>
+
+        <div class="container">
+
+            <div class="hero-text">
+
+                <h1 class="header-title">
+                    🎬 Discover Your Next Favorite Movie
+                </h1>
+
+                <p class="header-subtitle">
+                    Search thousands of movies and build your personal watchlist.
+                </p>
+
+            </div>
+
+            <a class="page-nav" href="watchlist.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Watchlist</span>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- Search -->
+
+        <form class="search-bar" id="form">
+
+            <input
+                id="search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search movies..."
+                autocomplete="off"
+            >
+
+            <button class="search-btn">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Search
+
+            </button>
+
+        </form>
+
+        <p class="search-hint">
+            Try searching: Batman, Avengers, Interstellar, Harry Potter...
+        </p>
+
+        <!-- Loading -->
+
+        <div id="loader" class="loader hidden">
+
+            <div class="spinner"></div>
+
+            <p>Searching movies...</p>
+
+        </div>
+
+        <!-- Movies -->
+
+        <section
+            class="movies-container"
+            id="movies-container">
+
+        </section>
+
+    </main>
+
+    <!-- Toast -->
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
