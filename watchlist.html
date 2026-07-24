@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieHub | My Watchlist</title>
+
+    <link rel="icon" type="image/x-icon" href="/movieicon.svg">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="overlay"></div>
+
+        <div class="container">
+
+            <div class="hero-text">
+
+                <h1 class="header-title">
+                    ❤️ My Watchlist
+                </h1>
+
+                <p class="header-subtitle">
+                    All your favourite movies in one place.
+                </p>
+
+            </div>
+
+            <a class="page-nav" href="index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Find Movies</span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section
+            class="movies-container"
+            id="watchlist-container">
+
+            <!-- Movies will be inserted here by JavaScript -->
+
+        </section>
+
+    </main>
+
+    <!-- Toast -->
+
+    <div id="toast" class="toast"></div>
+
+    <script src="watchlist.js"></script>
+
+</body>
+
+</html>
