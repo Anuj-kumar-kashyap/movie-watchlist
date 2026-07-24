@@ -1,0 +1,1168 @@
+/* ============================
+   GOOGLE FONT & RESET
+============================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --bg: #09090f;
+    --surface: rgba(22, 22, 34, .9);
+    --surface-light: rgba(255,255,255,.06);
+
+    --primary: #6366F1;
+    --primary-dark: #4F46E5;
+
+    --secondary: #EC4899;
+
+    --text: #F8FAFC;
+    --text-light: #CBD5E1;
+    --text-muted: #94A3B8;
+
+    --border: rgba(255,255,255,.08);
+
+    --shadow:
+        0 10px 40px rgba(0,0,0,.35);
+
+    --radius: 18px;
+
+    --transition: .35s ease;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    color:var(--text);
+
+    background:
+    radial-gradient(circle at top right,#4338ca25 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#ec489925 0%,transparent 35%),
+    var(--bg);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+}
+
+
+/* ============================
+      GLOBAL
+============================= */
+
+img{
+
+    width:100%;
+    display:block;
+    object-fit:cover;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+main,
+header{
+
+    width:min(1100px,92%);
+    margin:auto;
+
+}
+
+
+/* ============================
+        HEADER
+============================= */
+
+header{
+
+    margin-top:30px;
+
+    height:330px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+    rgba(10,10,15,.65),
+    rgba(10,10,15,.82)
+    ),
+
+    url("images/image-36.png");
+
+    background-size:cover;
+    background-position:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* Dark overlay */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(10,10,15,.85),
+        rgba(10,10,15,.35)
+    );
+
+}
+
+
+/* ============================
+      HEADER CONTENT
+============================= */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:55px;
+
+}
+
+
+.hero-text{
+
+    max-width:600px;
+
+}
+
+.header-title{
+
+    font-size:clamp(2rem,5vw,3.6rem);
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+.header-subtitle{
+
+    font-size:1.05rem;
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+    max-width:500px;
+
+}
+
+
+/* ============================
+      WATCHLIST BUTTON
+============================= */
+
+.page-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 22px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.page-nav:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+
+    box-shadow:
+    0 15px 35px rgba(99,102,241,.35);
+
+}
+
+
+/* ============================
+      SEARCH SECTION
+============================= */
+
+.search-bar{
+
+    width:min(750px,95%);
+
+    margin:-35px auto 0;
+
+    display:flex;
+
+    position:relative;
+
+    z-index:10;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+
+.search-input{
+
+    flex:1;
+
+    height:62px;
+
+    border:none;
+
+    outline:none;
+
+    padding-left:60px;
+
+    padding-right:20px;
+
+    font-size:1rem;
+
+    color:var(--text);
+
+    background:
+
+    rgba(20,20,30,.95);
+
+    border-radius:18px 0 0 18px;
+
+    border:1px solid var(--border);
+
+}
+
+.search-input::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+.search-input:focus{
+
+    border-color:var(--primary);
+
+}
+
+
+/* Search Icon */
+
+.search-bar::before{
+
+    content:"\f002";
+
+    font-family:"Font Awesome 6 Free";
+
+    font-weight:900;
+
+    position:absolute;
+
+    left:22px;
+
+    top:21px;
+
+    color:var(--text-muted);
+
+}
+
+
+/* Search Button */
+
+.search-btn{
+
+    width:170px;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    border-radius:0 18px 18px 0;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+
+    transition:var(--transition);
+
+}
+
+.search-btn:hover{
+
+    transform:scale(1.03);
+
+}
+
+.search-btn:active{
+
+    transform:scale(.96);
+
+}
+
+.search-hint{
+
+    margin-top:22px;
+
+    text-align:center;
+
+    color:var(--text-muted);
+
+    font-size:.95rem;
+
+}
+
+/* =====================================================
+                MOVIES CONTAINER
+===================================================== */
+
+.movies-container{
+
+    width:100%;
+
+    margin-top:45px;
+
+    padding:25px 0 80px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+
+/* =====================================================
+                    MOVIE CARD
+===================================================== */
+
+.movie{
+
+    display:grid;
+
+    grid-template-columns:170px 1fr;
+
+    gap:24px;
+
+    padding:20px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.07);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s ease;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.movie::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(99,102,241,.08),
+        rgba(236,72,153,.05)
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+    pointer-events:none;
+
+}
+.movie:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#6366F1;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45);
+
+}
+
+.movie:hover::before{
+
+    opacity:1;
+
+}
+
+
+/* =====================================================
+                    POSTER
+===================================================== */
+
+.movie-poster{
+
+    width:170px;
+
+    height:250px;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.45);
+
+}
+
+.movie-poster img{
+
+    width:100%;
+
+    height:100%;
+
+    transition:.45s ease;
+
+}
+
+.movie:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* =====================================================
+                    BODY
+===================================================== */
+
+.movie-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+
+/* =====================================================
+                    TITLE
+===================================================== */
+
+.movie-data{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:14px;
+
+}
+
+.movie-title{
+
+    font-size:1.45rem;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+.movie-rating{
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    background:rgba(250,204,21,.12);
+
+    color:#FFD54F;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+                    DETAILS
+===================================================== */
+
+.movie-details{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:18px;
+
+    color:#CBD5E1;
+
+    font-size:.95rem;
+
+}
+
+.movie-runtime{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.movie-genres{
+
+    color:#A5B4FC;
+
+}
+
+
+/* =====================================================
+                WATCHLIST BUTTON
+===================================================== */
+
+.add-remove-btn{
+
+    margin-left:auto;
+
+    padding:11px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        135deg,
+        #6366F1,
+        #EC4899
+    );
+
+    color:#fff;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:.35s;
+
+}
+
+.add-remove-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(99,102,241,.35);
+
+}
+
+.add-remove-btn:active{
+
+    transform:scale(.95);
+
+}
+
+
+/* =====================================================
+                    DESCRIPTION
+===================================================== */
+
+.movie-description{
+
+    color:#94A3B8;
+
+    line-height:1.8;
+
+    font-size:.96rem;
+
+    margin-top:10px;
+
+}
+
+
+/* =====================================================
+                    DIVIDER
+===================================================== */
+
+hr{
+
+    display:none;
+
+}
+
+
+/* =====================================================
+                EMPTY STATE
+===================================================== */
+
+.body-wrapper{
+
+    width:100%;
+
+    min-height:350px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.no-data{
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+    color:#CBD5E1;
+
+    margin-bottom:22px;
+
+}
+
+.body-wrapper .page-nav{
+
+    margin-top:12px;
+
+}
+
+
+/* =====================================================
+            HOVER TEXT EFFECTS
+===================================================== */
+
+.movie:hover .movie-title{
+
+    color:#A5B4FC;
+
+}
+
+.movie:hover .movie-description{
+
+    color:#E2E8F0;
+
+}
+
+
+/* =====================================================
+                SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#6366F1;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#8B5CF6;
+
+}
+
+/* ===================================================
+                LOADER
+=================================================== */
+
+.hidden{
+    display:none !important;
+}
+
+.loader{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:70px 0;
+    gap:18px;
+}
+
+.spinner{
+    width:55px;
+    height:55px;
+    border:5px solid rgba(255,255,255,.15);
+    border-top:5px solid #6366F1;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+.loader p{
+    color:#CBD5E1;
+    font-size:.95rem;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* ===================================================
+                TOAST
+=================================================== */
+
+.toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    padding:16px 22px;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #6366F1,
+        #EC4899
+    );
+
+    color:#fff;
+
+    font-weight:600;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    transform:translateY(120px);
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+.toast.show{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+}
+
+
+/* ===================================================
+                ANIMATIONS
+=================================================== */
+
+.movie{
+
+    animation:fadeUp .45s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===================================================
+                IMAGE FALLBACK
+=================================================== */
+
+.movie-poster img{
+
+    background:#1e293b;
+
+}
+
+
+/* ===================================================
+            SEARCH INPUT EFFECT
+=================================================== */
+
+.search-input:focus{
+
+    box-shadow:
+        0 0 0 3px rgba(99,102,241,.25);
+
+}
+
+
+/* ===================================================
+                BUTTON EFFECTS
+=================================================== */
+
+.search-btn,
+.add-remove-btn,
+.page-nav{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+
+}
+
+
+/* ===================================================
+            MOVIE DESCRIPTION
+=================================================== */
+
+.movie-description{
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:4;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+}
+
+
+/* ===================================================
+                MOBILE
+=================================================== */
+
+@media (max-width:900px){
+
+.container{
+
+    padding:40px;
+
+}
+
+.movie{
+
+    grid-template-columns:140px 1fr;
+
+}
+
+.movie-poster{
+
+    width:140px;
+    height:210px;
+
+}
+
+.header-title{
+
+    font-size:2.6rem;
+
+}
+
+}
+
+
+@media (max-width:700px){
+
+header{
+
+    height:370px;
+
+}
+
+.container{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:28px;
+
+}
+
+.page-nav{
+
+    width:fit-content;
+
+}
+
+.search-bar{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:-28px;
+
+}
+
+.search-input{
+
+    width:100%;
+
+    border-radius:18px;
+
+}
+
+.search-btn{
+
+    width:100%;
+
+    border-radius:18px;
+
+    height:58px;
+
+}
+
+.search-bar::before{
+
+    top:22px;
+
+}
+
+.movie{
+
+    grid-template-columns:1fr;
+
+}
+
+.movie-poster{
+
+    width:100%;
+
+    max-width:250px;
+
+    margin:auto;
+
+    height:360px;
+
+}
+
+.movie-data{
+
+    flex-wrap:wrap;
+
+}
+
+.movie-details{
+
+    gap:12px;
+
+}
+
+.add-remove-btn{
+
+    margin-left:0;
+
+    margin-top:8px;
+
+}
+
+}
+
+
+@media (max-width:500px){
+
+body{
+
+    font-size:14px;
+
+}
+
+.header-title{
+
+    font-size:2rem;
+
+}
+
+.header-subtitle{
+
+    font-size:.9rem;
+
+}
+
+.movies-container{
+
+    margin-top:35px;
+
+}
+
+.toast{
+
+    left:20px;
+    right:20px;
+    bottom:20px;
+
+    text-align:center;
+
+}
+
+}
+
+
+/* ===================================================
+                DESKTOP HOVER
+=================================================== */
+
+@media (hover:hover){
+
+.movie:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.01);
+
+}
+
+.search-btn:hover{
+
+    filter:brightness(1.1);
+
+}
+
+}
+
+
+/* ===================================================
+                SELECTION
+=================================================== */
+
+::selection{
+
+    background:#6366F1;
+
+    color:#fff;
+
+}
+
+
+/* ===================================================
+                REMOVE OUTLINES
+=================================================== */
+
+button:focus,
+input:focus{
+
+    outline:none;
+
+}
+
+
+/* ===================================================
+                END
+=================================================== */
